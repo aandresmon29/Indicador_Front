@@ -4,8 +4,6 @@
       <h1>Indicadores BCS</h1>
       <nav>
         <button v-on:click="init" v-if="is_auth" > Inicio </button>
-        <button v-on:click="getBalance" v-if="is_auth" > Indicadores </button>
-        <button v-if="is_auth" >Cerrar Sesión</button>
       </nav>
     </div>
     <div class="main-component">
