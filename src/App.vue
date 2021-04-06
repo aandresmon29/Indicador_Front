@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <div class="header">
-      <h1>Indicadores BCS</h1>
-      <nav>
-        <button v-on:click="init" v-if="is_auth" > Inicio </button>
-      </nav>
+      <h1>Indicadores Corte<br>31/03/2021</h1>
     </div>
     <div class="main-component">
+      <ul><nav>
+        <button v-on:click="init"><font face="Century Gothic">Incio</font></button>
+        <button v-on:click="gerencias"><font face="Century Gothic">Ir a Gerencias</font></button>
+      </nav></ul>
       <router-view></router-view>
     </div>
     <div class="footer">
@@ -15,25 +16,27 @@
   </div>
 </template>
 <script>
+import Gerencia from './components/gerencia.vue'
+import User from './components/user.vue'
+
 export default {
-  name: 'App',
-  components: {},
-  data: function(){
-    return {
-      is_auth: localStorage.getItem('isAuth') || false
-    }
+name: 'header',
+  components: {
+    Gerencia,
+    User
   },
   methods: {
     init: function(){
-      if(this.$route.name != "user"){
-        let username = localStorage.getItem("current_username")
-        this.$router.push({name: "user", params:{username:username}})
+      if(this.$route.name != "User"){
+      let username = localStorage.getItem("current_User")
+      this.$router.push({name: "User", params:{username:username}})
       }
     },
-    beforeCreate: function(){
-      localStorage.setItem('current_username', 'Admin')
-      localStorage.setItem('isAuth', true)
-      this.$router.push({name:"user",params:{username:'Admin'}})
+    gerencias: function(){
+      if(this.$route.name != "gerencia"){
+      let username = localStorage.getItem("current_gerencia")
+      this.$router.push({name: "gerencia", params:{username:username}})
+      }
     }
   }
 }
@@ -52,32 +55,13 @@ body{
   background-color: #2480e2 ;
   color:#f3edec ;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .header h1{
   width: 20%;
-  text-align: right;
-}
-.header nav {
-  height: 100%;
-  width: 45%;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  font-size: 20px;
-}
-.header nav button{
-  color: #E5E7E9;
-  background: #0e5e8d;
-  border: 1px solid #f01e17;
-  border-radius: 5px;
-  padding: 10px 20px;
-}
-.header nav button:hover{
-  color: #283747;
-  background: #E5E7E9;
-  border: 1px solid #E5E7E9;
+  text-align: center;
 }
 .main-component{
   height: 70vh;

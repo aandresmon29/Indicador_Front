@@ -1,38 +1,47 @@
 <template>
-    <div id="User">
-        <h2>Usted Ha Ingresado con el usuario <span> {{username}}, </span> <br> <br> ¡Bienvenido! </h2>
+    <div id="UserInfo">
+        <h2>Usted Ha Ingresado con el usuario <span> {{usuario}}, </span> <br> <br> ¡Bienvenido! </h2>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "User",
-        data:function(){
-            return {
-                username: "none"
-            }
-        },
-        created: function(){
-            this.username = this.$route.params.username
+import axios from 'axios';
+export default {
+    name: 'User',
+    data: function (){
+        return {
+        usuario: ""
         }
-    }
+    },
+    created: function(){
+        this.usuario = this.$route.params.username
+        let self = this
+        axios.get("https://indicadorb.herokuapp.com/user/info/Consulta")
+        .then((result) => {
+        self.usuario = result.data.username
+        })
+        .catch((error) => {
+        alert("Usuario no Autorizado");
+        });
+    },
+}
 </script>
 
 <style>
-    #User{
+    #UserInfo{
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    #User h2{
+    #UserInfo h2{
         font-size: 50px;
         color: #283747;
         text-align: center;
         }
-    #User span{
-        color: crimson;
+    #UserInfo span{
+        color: red;
         font-weight: bold;
     }
 </style>

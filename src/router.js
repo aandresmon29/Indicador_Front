@@ -1,5 +1,7 @@
 import vueRouter from 'vue-router'
 import User from './components/user'
+import gerencia from './components/gerencia'
+import indicadores from './components/indicadores'
 import App from './App'
 
 const router = new vueRouter({
@@ -12,9 +14,19 @@ const router = new vueRouter({
             component: App
         },
         {
-            path: '/user/info/:username',
+            path: '/user/info',
             name: "User",
             component: User
+        },
+        {
+            path: '/gerencias/gerencia1',
+            name: "gerencia",
+            component: gerencia
+        },
+        {
+            path: '/gerencias/gerencia1/indicadores',
+            name: "indicadores",
+            component: indicadores
         },
     ]
 })
