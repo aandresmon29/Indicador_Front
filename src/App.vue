@@ -4,14 +4,7 @@
       <h1>Indicadores Corte<br>31/03/2021</h1>
     </div>
     <div class="main-component">
-      <ul><nav>
-        <button v-on:click="init"><font face="Century Gothic">Incio</font></button>
-        <button v-on:click="gerencias"><font face="Century Gothic">Ir a Gerencias</font></button>
-      </nav></ul>
       <router-view></router-view>
-    </div>
-    <div class="footer">
-      <h2>Indicadores Gerencia de Operación Bancaria 2021</h2>
     </div>
   </div>
 </template>
@@ -59,9 +52,11 @@ body{
   align-items: center;
 }
 .header h1{
-  width: 20%;
+  display: flex;
+  width: 15%;
   align-items: center;
   text-align: center;
+  font-size: 18pt;
 }
 .main-component{
   height: 70vh;

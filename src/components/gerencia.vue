@@ -5,7 +5,7 @@
      <h2>{{indicador}}</h2>
      <label for="fgerencia"> {{gerencia}} </label>
      <form v-on:submit.prevent="ShowDetail">
-     <button v-on:click="goto"><font face="Century Gothic">Ir</font></button>
+     <button v-on:click="goto"><font face="Century Gothic">--</font></button>
      </form>
    </nav3>
 </div>
@@ -53,7 +53,7 @@ export default {
   margin: 0px;
   width: 100%;
   height: 10vh;
-  min-height: 100px; 
+  min-height: 20px; 
   text-align: center;
   color: black;
   display: inline-flex;
@@ -62,10 +62,10 @@ export default {
   float: left;
 }
 #mainger nav3 h2 {
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     border-radius: 50%;
-     background:red;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background:rgb(60, 255, 0);
     width:50px;
     height:50px;
     display:flex;
@@ -74,7 +74,7 @@ export default {
 }
 #mainger nav3 label{
   background: white;
-  width:150px;
+  width:170px;
   height:50px;
   display:flex;
   align-items:center;
@@ -87,6 +87,15 @@ export default {
   display:flex;
   justify-content:center;
   align-items:center;
-  padding-left:20px;
+  min-height: 20px; 
+}
+#mainger nav3 form button{
+	background: url('../assets/ir.png');
+  background-size: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  color: white;
+  align-items: center;
 }
 </style>

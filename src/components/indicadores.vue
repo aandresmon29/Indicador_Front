@@ -2,6 +2,13 @@
 <div id="mainindi">
   <h2>Indicadores</h2>
   <h3>{{gerencia}}</h3>
+  <nav5>
+    <label1 for="fgerencia"> Nombre Indicador </label1>
+    <label2 for="fgerencia"> </label2>
+    <label3 for="fgerencia"> Sem </label3>    
+    <label2 for="fgerencia"> </label2>
+    <label4 for="fgerencia"> Pon </label4>
+  </nav5>  
   <nav2>
     <label1 for="fgerencia"> {{nombrein}}  </label1>
     <label2 for="fgerencia"> </label2>
@@ -10,7 +17,7 @@
     <h5>{{ponderado}}</h5>
     <label2 for="fgerencia"> </label2>
     <form v-on:submit.prevent="ShowDetail">
-    <button v-on:click="goto"><font face="Century Gothic">Ir</font></button>
+    <button v-on:click="goto"><font face="Century Gothic">--</font></button>
     </form>
   </nav2>
   <nav3>
@@ -21,7 +28,7 @@
     <h5>{{ponderador}}</h5>
     <label2 for="fgerencia"> </label2>
     <form v-on:submit.prevent="ShowDetail">
-    <button v-on:click="gotor"><font face="Century Gothic">Ir</font></button>
+    <button v-on:click="gotor"><font face="Century Gothic">--</font></button>
     </form>
   </nav3>
   <nav4>
@@ -32,9 +39,12 @@
     <h5>{{ponderadoc}}</h5>
     <label2 for="fgerencia"> </label2>
     <form v-on:submit.prevent="ShowDetail">
-    <button v-on:click="gotoc"><font face="Century Gothic">Ir</font></button>
+    <button v-on:click="gotoc"><font face="Century Gothic">--</font></button>
     </form>
   </nav4>
+  <nav6>
+    <button v-on:click="gerencias"><font face="Century Gothic">Ir a Gerencias</font></button>
+  </nav6>
 </div>
 </template>
 
@@ -107,6 +117,12 @@ export default {
       this.$router.push({name: "detallea", params:{username:username}})
       }
     },
+    gerencias: function(){
+      if(this.$route.name != "gerencia"){
+      let username = localStorage.getItem("current_gerencia")
+      this.$router.push({name: "gerencia", params:{username:username}})
+      }
+    }
   },
 }
 </script>
@@ -126,7 +142,7 @@ export default {
   margin: 0px;
   width: 100%;
   height: 10vh;
-  min-height: 80px; 
+  min-height: 50px; 
   text-align: center;
   color: black;
   display: inline-flex;
@@ -140,21 +156,23 @@ export default {
   height:50px;
   display:flex;
   align-items:center;
-  text-align: left;
+  text-align: justify;
   border-radius: 10%;
   padding-left: 5px;
   padding-right:20px;
+  font-size: 9pt;
 }
 #mainindi nav2 h4 {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #5cb85c;
+  background:rgb(60, 255, 0);
   width:50px;
   height:50px;
   display:flex;
   justify-content:center;
   align-items:center;
+  font-size: 14pt;
 }
 #mainindi nav2 label2{
   background: white;
@@ -169,13 +187,23 @@ export default {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #5cb85c;
+  background:rgb(60, 255, 0);
   width:50px;
   height:50px;
   display:flex;
   justify-content:center;
   align-items:center;
+  font-size: 14pt;
   }
+#mainindi nav2 form button{
+	background: url('../assets/ir.png');
+  background-size: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  color: white;
+  align-items: center;
+}
 #mainindi nav3{
   margin: 0px;
   width: 100%;
@@ -194,21 +222,23 @@ export default {
   height:50px;
   display:flex;
   align-items:center;
-  text-align: left;
+  text-align: justify;
   border-radius: 10%;
   padding-left: 5px;
   padding-right:20px;
+  font-size: 9pt;
 }
 #mainindi nav3 h4 {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #5cb85c;
+  background:rgb(60, 255, 0);
   width:50px;
   height:50px;
   display:flex;
   justify-content:center;
   align-items:center;
+  font-size: 14pt;
 }
 #mainindi nav3 label2{
   background: white;
@@ -223,18 +253,28 @@ export default {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #5cb85c;
+  background: rgb(60, 255, 0);
   width:50px;
   height:50px;
   display:flex;
   justify-content:center;
   align-items:center;
-  }
+  font-size: 14pt;
+}
+#mainindi nav3 form button{
+	background: url('../assets/ir.png');
+  background-size: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  color: white;
+  align-items: center;
+}
 #mainindi nav4{
   margin: 0px;
   width: 100%;
   height: 10vh;
-  min-height: 80px; 
+  min-height: 50px; 
   text-align: center;
   color: black;
   display: inline-flex;
@@ -248,21 +288,23 @@ export default {
   height:50px;
   display:flex;
   align-items:center;
-  text-align: left;
+  text-align: justify;
   border-radius: 10%;
   padding-left: 5px;
   padding-right:20px;
+  font-size: 9pt;
 }
 #mainindi nav4 h4 {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #5cb85c;
+  background:rgb(60, 255, 0);
   width:50px;
   height:50px;
   display:flex;
   justify-content:center;
   align-items:center;
+  font-size: 14pt;
 }
 #mainindi nav4 label2{
   background: white;
@@ -277,11 +319,96 @@ export default {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #5cb85c;
+  background:rgb(60, 255, 0);
   width:50px;
   height:50px;
   display:flex;
   justify-content:center;
   align-items:center;
-  }
+  font-size: 14pt;
+}
+#mainindi nav4 form button{
+	background: url('../assets/ir.png');
+  background-size: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  color: white;
+  align-items: center;
+}
+#mainindi nav5{
+  margin: 0px;
+  width: 100%;
+  height: 10vh;
+  min-height: 0px; 
+  text-align: center;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  font-size: 8pt;
+  font-weight: bold;
+}
+#mainindi nav5 label1{
+  background: white;
+  width:120px;
+  height:50px;
+  display:flex;
+  align-items:center;
+  border-radius: 10%;
+  padding-left: 20px;
+  padding-right:5px;
+}
+#mainindi nav5 label2{
+  background: white;
+  width:10px;
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#mainindi nav5 label3{
+  background: white;
+  width:50px;
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: Center;
+}
+#mainindi nav5 label4{
+  background: white;
+  width:50px;
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: Center;
+  padding-right:35px;
+}
+#mainindi nav2{
+  margin: 0px;
+  width: 100%;
+  height: 10vh;
+  min-height: 50px; 
+  text-align: center;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+#mainindi nav6{
+  margin: 0px;
+  width: 100%;
+  height: 10vh;
+  min-height: 80px; 
+  text-align: center;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
 </style>
