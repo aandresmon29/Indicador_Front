@@ -3,6 +3,8 @@ import User from './components/user'
 import gerencia from './components/gerencia'
 import indicadores from './components/indicadores'
 import detallea from './components/detallea'
+import detalleb from './components/detalleb'
+import detallec from './components/detallec'
 import App from './App'
 
 const router = new vueRouter({
@@ -33,6 +35,16 @@ const router = new vueRouter({
             path: '/gerencias/gerencia1/indicadores/indicador1',
             name: "detallea",
             component: detallea
+        },
+        {
+            path: '/gerencias/gerencia1/indicadores/indicador2',
+            name: "detalleb",
+            component: detalleb
+        },
+        {
+            path: '/gerencias/gerencia1/indicadores/indicador3',
+            name: "detallec",
+            component: detallec
         },
     ]
 })

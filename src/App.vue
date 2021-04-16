@@ -41,7 +41,7 @@ body{
 }
 .header{
   height: 10vh;
-  min-height: 100px;
+  min-height: 80px;
   background-color: #2480e2 ;
   color:#f3edec ;
   display: flex;

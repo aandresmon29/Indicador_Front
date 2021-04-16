@@ -5,9 +5,9 @@
   <nav5>
     <label1 for="fgerencia"> Nombre Indicador </label1>
     <label2 for="fgerencia"> </label2>
-    <label3 for="fgerencia"> Sem </label3>    
+    <label3 for="fgerencia"> Semana </label3>    
     <label2 for="fgerencia"> </label2>
-    <label4 for="fgerencia"> Pon </label4>
+    <label4 for="fgerencia"> Acum </label4>
   </nav5>  
   <nav2>
     <label1 for="fgerencia"> {{nombrein}}  </label1>
@@ -106,15 +106,15 @@ export default {
       }
     },
     gotor: function(){
-      if(this.$route.name != "detallea"){
-      let username = localStorage.getItem("current_detallea")
-      this.$router.push({name: "detallea", params:{username:username}})
+      if(this.$route.name != "detalleb"){
+      let username = localStorage.getItem("current_detalleb")
+      this.$router.push({name: "detalleb", params:{username:username}})
       }
     },
     gotoc: function(){
-      if(this.$route.name != "detallea"){
-      let username = localStorage.getItem("current_detallea")
-      this.$router.push({name: "detallea", params:{username:username}})
+      if(this.$route.name != "detallec"){
+      let username = localStorage.getItem("current_detallec")
+      this.$router.push({name: "detallec", params:{username:username}})
       }
     },
     gerencias: function(){
@@ -357,7 +357,7 @@ export default {
   display:flex;
   align-items:center;
   border-radius: 10%;
-  padding-left: 20px;
+  padding-left: 15px;
   padding-right:5px;
 }
 #mainindi nav5 label2{
