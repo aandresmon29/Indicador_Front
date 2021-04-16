@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="header">
-      <h1>Indicadores Corte<br>31/03/2021</h1>
+      <h1>Indicadores Corte<br>15/04/2021</h1>
     </div>
     <div class="main-component">
       <router-view></router-view>
@@ -40,9 +40,6 @@ body{
   margin: 0 0 0 0;
 }
 .header{
-  margin: 0%;
-  padding: 0;
-  width: 100%;
   height: 10vh;
   min-height: 100px;
   background-color: #2480e2 ;
@@ -53,7 +50,6 @@ body{
 }
 .header h1{
   display: flex;
-  width: 15%;
   align-items: center;
   text-align: center;
   font-size: 18pt;
