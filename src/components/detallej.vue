@@ -45,7 +45,7 @@ export default {
       this.lred = this.$route.params.lred
       this.central = this.$route.params.central
       let self = this
-      axios.get("https://indicadorb.herokuapp.com/Indicadores/Indicador1")
+      axios.get("https://indicadorb.herokuapp.com/Indicadores/Indicador10")
       .then((result) => {
       self.formula = result.data.formula
       self.calculo = result.data.calculo
@@ -71,14 +71,14 @@ export default {
 
 <style>
 #maindet h3{
-  display:inline-flex;
+  display:flex;
   justify-content:center;
   align-items:center;
   height: 10px;
   width: 100%;
 }
 #maindet h7{
-  display:inline-flex;
+  display:flex;
   justify-content:center;
   align-items:center;
   width: 100%;

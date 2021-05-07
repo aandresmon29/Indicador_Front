@@ -8,6 +8,7 @@
     <label1 for="fgerencia"> </label1>
     <h6>Menor a {{lred}}</h6>
   </nav2>
+  <h7>{{central}}</h7>
   <nav3>
     <h2>Formula</h2>
     <label1 for="fgerencia"> {{formula}} </label1>
@@ -25,14 +26,15 @@
 <script>
 import axios from 'axios';
 export default {
-  name: 'detallec',
+  name: 'detallea',
   data: function (){
       return {
       formula: "",
       calculo: "",
       lgreen: 0.0,
       lyellow: 0.0,
-      lred: 0.0
+      lred: 0.0,
+      central: ""
       }
   },
   created: function(){
@@ -41,6 +43,7 @@ export default {
       this.lgreen = this.$route.params.lgreen
       this.lyellow = this.$route.params.lyellow
       this.lred = this.$route.params.lred
+      this.central = this.$route.params.central
       let self = this
       axios.get("https://indicadorb.herokuapp.com/Indicadores/Indicador3")
       .then((result) => {
@@ -49,6 +52,7 @@ export default {
       self.lgreen = result.data.lgreen
       self.lyellow = result.data.lyellow
       self.lred = result.data.lred
+      self.central = result.data.central
       })
       .catch((error) => {
       alert("Sin informacion para mostrar");
@@ -70,12 +74,20 @@ export default {
   display:flex;
   justify-content:center;
   align-items:center;
+  height: 10px;
+  width: 100%;
+}
+#maindet h7{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+  height: 15px;
 }
 #maindet nav2{
   margin: 0px;
   width: 100%;
-  height: 10vh;
-  min-height: 20px; 
+  height: 20vh;
   text-align: center;
   color: black;
   display: inline-flex;
