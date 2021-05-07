@@ -81,6 +81,7 @@ export default {
   display:flex;
   justify-content:center;
   align-items:center;
+  text-align: center;
   width: 100%;
   height: 15px;
 }
