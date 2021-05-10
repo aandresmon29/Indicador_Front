@@ -471,7 +471,7 @@ export default {
 }
 #mainindi nav2 label1{
   background: rgb(241, 240, 233);
-  width:120px;
+  width:130px;
   height:50px;
   display:flex;
   align-items:center;
@@ -537,7 +537,7 @@ export default {
 }
 #mainindi nav3 label1{
   background: rgb(241, 240, 233);
-  width:120px;
+  width:130px;
   height:50px;
   display:flex;
   align-items:center;
@@ -603,7 +603,7 @@ export default {
 }
 #mainindi nav4 label1{
   background: rgb(241, 240, 233);
-  width:120px;
+  width:130px;
   height:50px;
   display:flex;
   align-items:center;
@@ -671,7 +671,7 @@ export default {
 }
 #mainindi nav5 label1{
   background: white;
-  width:120px;
+  width:130px;
   height:50px;
   display:flex;
   align-items:center;
@@ -744,7 +744,7 @@ export default {
 }
 #mainindi nav7 label1{
   background: rgb(241, 240, 233);
-  width:120px;
+  width:130px;
   height:50px;
   display:flex;
   align-items:center;
