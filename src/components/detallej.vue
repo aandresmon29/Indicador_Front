@@ -6,7 +6,7 @@
     <label1 for="fgerencia"> </label1>
     <h5>>={{lyellow}}</h5>
     <label1 for="fgerencia"> </label1>
-    <h6>Menor a {{lyellow}}</h6>
+    <h6>Menor a {{lred}}</h6>
   </nav2>
   <h7>{{central}}</h7>
   <nav3>
