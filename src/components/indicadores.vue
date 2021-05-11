@@ -527,7 +527,7 @@ export default {
   margin: 0px;
   width: 100%;
   height: 10vh;
-  min-height: 80px; 
+  min-height: 50px; 
   text-align: center;
   color: black;
   display: inline-flex;
