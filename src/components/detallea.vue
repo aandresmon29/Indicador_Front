@@ -10,12 +10,12 @@
   </nav2>
   <h7>{{central}}</h7>
   <nav3>
-    <h2>Formula</h2>
-    <label1 for="fgerencia"> {{formula}} </label1>
-    <br>
     <h2>Datos</h2>
     <label1 for="fgerencia"> {{calculo}} </label1>
     <br><br>
+    <h2>Observación</h2>
+    <label1 for="fgerencia"> {{comentario}} </label1>
+    <br>
     <form v-on:submit.prevent="ShowDetail">
       <button v-on:click="goto"><font face="Century Gothic">Volver</font></button>
     </form>
@@ -40,6 +40,7 @@ export default {
   created: function(){
       this.formula = this.$route.params.formula
       this.calculo = this.$route.params.calculo
+      this.comentario = this.$route.params.comentario
       this.lgreen = this.$route.params.lgreen
       this.lyellow = this.$route.params.lyellow
       this.lred = this.$route.params.lred
@@ -49,6 +50,7 @@ export default {
       .then((result) => {
       self.formula = result.data.formula
       self.calculo = result.data.calculo
+      self.comentario = result.data.comentario
       self.lgreen = result.data.lgreen
       self.lyellow = result.data.lyellow
       self.lred = result.data.lred
