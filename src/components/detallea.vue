@@ -12,7 +12,7 @@
   <nav3>
     <h2>Datos</h2>
     <label1 for="fgerencia"> {{calculo}} </label1>
-    <br><br>
+    <br>
     <h2>Observación</h2>
     <label1 for="fgerencia"> {{comentario}} </label1>
     <br>
@@ -143,13 +143,21 @@ export default {
 #maindet nav3{
   margin: 0px;
   width: 100%;
-  height: 10vh;
+  height: 20px;
   min-height: 20px; 
   text-align: center;
   color: black;
-  display: block;
+  display: inline-block;
   align-items: center;
   justify-content: center;
-  float: left;
+}
+#maindet nav3 h2{
+  height: 20px;
+}
+#maindet nav3 h2{
+  height: 20px;
+}
+#maindet nav3 form{
+  margin: 20px;
 }
 </style>
