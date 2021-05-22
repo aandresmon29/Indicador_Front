@@ -9,7 +9,7 @@
     <label2 for="fgerencia"> </label2>
     <label4 for="fgerencia"> Acum </label4>
   </nav5>  
-  <nav8>
+  <nav2>
     <label1 for="fgerencia"> {{nombrein}}  </label1>
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentaje}}</h4>
@@ -19,7 +19,7 @@
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="goto"><font face="Century Gothic">--</font></button>
     </form>
-  </nav8>
+  </nav2>
   <nav2>
     <label1 for="fgerencia"> {{nombreinr}}  </label1>
     <label2 for="fgerencia"> </label2>
@@ -31,7 +31,7 @@
     <button v-on:click="gotor"><font face="Century Gothic">--</font></button>
     </form>
   </nav2>
-  <nav2>
+  <nav3>
     <label1 for="fgerencia"> {{nombreinc}}  </label1>
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajec}}</h4>
@@ -41,8 +41,8 @@
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="gotoc"><font face="Century Gothic">--</font></button>
     </form>
-  </nav2>
-  <nav2>
+  </nav3>
+  <nav3>
     <label1 for="fgerencia"> {{nombreind}}  </label1>
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajed}}</h4>
@@ -52,7 +52,7 @@
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="gotod"><font face="Century Gothic">--</font></button>
     </form>
-  </nav2>
+  </nav3>
   <nav3>
     <label1 for="fgerencia"> {{nombreine}}  </label1>
     <label2 for="fgerencia"> </label2>
@@ -64,7 +64,7 @@
     <button v-on:click="gotoe"><font face="Century Gothic">--</font></button>
     </form>
   </nav3>
-  <nav3>
+  <nav4>
     <label1 for="fgerencia"> {{nombreinf}}  </label1>
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajef}}</h4>
@@ -74,8 +74,8 @@
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="gotof"><font face="Century Gothic">--</font></button>
     </form>
-  </nav3>
-  <nav10>
+  </nav4>
+  <nav4>
     <label1 for="fgerencia"> {{nombreing}}  </label1>
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajeg}}</h4>
@@ -85,8 +85,8 @@
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="gotog"><font face="Century Gothic">--</font></button>
     </form>
-  </nav10>
-  <nav10>
+  </nav4>
+  <nav4>
     <label1 for="fgerencia"> {{nombreinh}}  </label1>
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajeh}}</h4>
@@ -96,8 +96,8 @@
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="gotoh"><font face="Century Gothic">--</font></button>
     </form>
-  </nav10>
-  <nav11>
+  </nav4>
+  <nav12>
     <label1 for="fgerencia"> {{nombreini}}  </label1>
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajei}}</h4>
@@ -107,7 +107,7 @@
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="gotoi"><font face="Century Gothic">--</font></button>
     </form>
-  </nav11>
+  </nav12>
   <nav4>
     <label1 for="fgerencia"> {{nombreinj}}  </label1>
     <label2 for="fgerencia"> </label2>
@@ -119,7 +119,7 @@
     <button v-on:click="gotoj"><font face="Century Gothic">--</font></button>
     </form>
   </nav4>
-  <nav4>
+  <nav12>
     <label1 for="fgerencia"> {{nombreink}}  </label1>
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajek}}</h4>
@@ -129,7 +129,7 @@
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="gotok"><font face="Century Gothic">--</font></button>
     </form>
-  </nav4>
+  </nav12>
   <nav4>
     <label1 for="fgerencia"> {{nombreinl}}  </label1>
     <label2 for="fgerencia"> </label2>
@@ -157,7 +157,7 @@
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajen}}</h4>
     <label2 for="fgerencia"> </label2>
-    <h5>{{ponderadon}}</h5>
+    <h5>{{ponderadon}}</h5>--
     <label2 for="fgerencia"> </label2>
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="goton"><font face="Century Gothic">--</font></button>
@@ -706,18 +706,6 @@ export default {
   text-align: Center;
   padding-right:35px;
 }
-#mainindi nav2{
-  margin: 0px;
-  width: 100%;
-  height: 10vh;
-  min-height: 50px; 
-  text-align: center;
-  color: black;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  float: left;
-}
 #mainindi nav6{
   margin: 0px;
   width: 100%;
@@ -1052,6 +1040,72 @@ export default {
   font-size: 14pt;
   }
 #mainindi nav11 form button{
+	background: url('../assets/ir.png');
+  background-size: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  color: white;
+  align-items: center;
+}
+#mainindi nav12{
+  margin: 0px;
+  width: 100%;
+  height: 10vh;
+  min-height: 50px; 
+  text-align: center;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+#mainindi nav12 label1{
+  background: rgb(241, 240, 233);
+  width:140px;
+  height:50px;
+  display:flex;
+  align-items:center;
+  text-align: justify;
+  border-radius: 10%;
+  padding-left: 5px;
+  padding-right:20px;
+  font-size: 9pt;
+}
+#mainindi nav12 h4 {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background:rgb(60, 255, 0);
+  width:50px;
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 14pt;
+}
+#mainindi nav12 label2{
+  background: white;
+  width:10px;
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: left;
+}
+#mainindi nav12 h5 {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: yellow;
+  width:50px;
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 14pt;
+  }
+#mainindi nav12 form button{
 	background: url('../assets/ir.png');
   background-size: 100%;
   border: none;
