@@ -157,7 +157,7 @@
     <label2 for="fgerencia"> </label2>
     <h4>{{porcentajen}}</h4>
     <label2 for="fgerencia"> </label2>
-    <h5>{{ponderadon}}</h5>--
+    <h5>{{ponderadon}}</h5>
     <label2 for="fgerencia"> </label2>
     <form v-on:submit.prevent="ShowDetail">
     <button v-on:click="goton"><font face="Century Gothic">--</font></button>
