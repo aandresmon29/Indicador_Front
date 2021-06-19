@@ -16,6 +16,7 @@ import detallek from './components/detallek'
 import detallel from './components/detallel'
 import detallem from './components/detallem'
 import detallen from './components/detallen'
+import detalleo from './components/detalleo'
 import App from './App'
 
 const router = new vueRouter({
@@ -111,6 +112,11 @@ const router = new vueRouter({
             path: '/gerencias/gerencia1/indicadores/indicador14',
             name: "detallen",
             component: detallen
+        },
+        {
+            path: '/gerencias/gerencia1/indicadores/indicador15',
+            name: "detalleo",
+            component: detalleo
         },
     ]
 })

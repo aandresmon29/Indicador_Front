@@ -163,6 +163,17 @@
     <button v-on:click="goton"><font face="Century Gothic">--</font></button>
     </form>
   </nav4>
+  <nav4>
+    <label1 for="fgerencia"> {{nombreino}}  </label1>
+    <label2 for="fgerencia"> </label2>
+    <h4>{{porcentajeo}}</h4>
+    <label2 for="fgerencia"> </label2>
+    <h5>{{ponderadoo}}</h5>
+    <label2 for="fgerencia"> </label2>
+    <form v-on:submit.prevent="ShowDetail">
+    <button v-on:click="goton"><font face="Century Gothic">--</font></button>
+    </form>
+  </nav4>
   <nav6>
     <button v-on:click="gerencias"><font face="Century Gothic">Ir a Gerencias</font></button>
   </nav6>
@@ -218,6 +229,9 @@ export default {
       nombreinn: "",
       porcentajen: 0.0,
       ponderadon: 0.0,
+      nombreino: "",
+      porcentajeo: 0.0,
+      ponderadoo: 0.0,
       }
   },
   created: function(){
@@ -349,6 +363,15 @@ export default {
       self.nombreinn = result.data.name
       self.porcentajen = result.data.porcentaje
       self.ponderadon = result.data.ponderado
+      })
+      this.nombreino = this.$route.params.name
+      this.porcentajeo = this.$route.params.porcentaje
+      this.ponderadoo = this.$route.params.ponderado
+      axios.get("https://indicadorb.herokuapp.com/Indicadores/Indicador15")
+      .then((result) => {
+      self.nombreino = result.data.name
+      self.porcentajeo = result.data.porcentaje
+      self.ponderadoo = result.data.ponderado
       })
   },
   methods: {
