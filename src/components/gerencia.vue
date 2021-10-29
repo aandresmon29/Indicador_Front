@@ -2,7 +2,7 @@
 <div id="mainger">
   <h3>Gerencias</h3>
   <nav4>
-     <h2>""</h2>
+     <h2></h2>
      <label for="fgerencia"> {{gerenciad}} </label>
      <form v-on:submit.prevent="ShowDetail">
      <button v-on:click="gotod"><font face="Century Gothic">--</font></button>
@@ -166,7 +166,6 @@ export default {
   color: white;
   align-items: center;
 }
-
 #mainger nav4{
   margin: 0px;
   width: 100%;
@@ -200,5 +199,14 @@ export default {
   border-radius: 10%;
   padding-left:10px;
   padding-right:20px;
+}
+#mainger nav4 form button{
+	background: url('../assets/ir.png');
+  background-size: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  color: white;
+  align-items: center;
 }
 </style>
