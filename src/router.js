@@ -4,6 +4,7 @@ import gerencia from './components/gerencia'
 import indicadoresa from './components/indicadoresa'
 import indicadoresb from './components/indicadoresb'
 import indicadoresc from './components/indicadoresc'
+import indicadoresd from './components/indicadoresd'
 import detallea from './components/detallea'
 import detalleb from './components/detalleb'
 import detallec from './components/detallec'
@@ -55,6 +56,7 @@ import detallecz from './components/detallecz'
 import detallecaa from './components/detallecaa'
 import detallecab from './components/detallecab'
 import detallecac from './components/detallecac'
+import detalleda from './components/detalleda'
 import App from './App'
 
 const router = new vueRouter({
@@ -90,6 +92,11 @@ const router = new vueRouter({
             path: '/gerencias/gerencia3/indicadores',
             name: "indicadoresc",
             component: indicadoresc
+        },
+        {
+            path: '/gerencias/gerencia4/indicadores',
+            name: "indicadoresd",
+            component: indicadoresd
         },
         {
             path: '/gerencias/gerencia1/indicadores/indicador1',
@@ -345,6 +352,11 @@ const router = new vueRouter({
             path: '/gerencias/gerencia3/indicadores/indicador28',
             name: "detallecac",
             component: detallecac
+        },
+        {
+            path: '/gerencias/gerencia4/indicadores/indicador1',
+            name: "detalleda",
+            component: detalleda
         },
     ]
 })

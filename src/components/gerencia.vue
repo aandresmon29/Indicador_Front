@@ -2,6 +2,13 @@
 <div id="mainger">
   <h3>Gerencias</h3>
   <nav3>
+     <h2>{{indicadord}}</h2>
+     <label for="fgerencia"> {{gerenciad}} </label>
+     <form v-on:submit.prevent="ShowDetail">
+     <button v-on:click="gotod"><font face="Century Gothic">--</font></button>
+     </form>
+  </nav3>
+  <nav3>
      <h2>{{indicadorb}}</h2>
      <label for="fgerencia"> {{gerenciab}} </label>
      <form v-on:submit.prevent="ShowDetail">
@@ -32,7 +39,10 @@ export default {
       colorinb: "",
       gerenciac: "",
       indicadorc: 0.0,
-      colorinc: ""
+      colorinc: "",
+      gerenciad: "",
+      indicadord: 0.0,
+      colorind: ""
       }
   },
   created: function(){
@@ -64,6 +74,15 @@ export default {
       self.indicadorc = result.data.indigen
       self.b = result.data.color
       })
+      this.gerenciad = this.$route.params.name
+      this.indicadord = this.$route.params.indigen
+      this.colorind = this.$route.params.color
+      axios.get("https://indicadorb.herokuapp.com/Gerencia/Gerencia4")
+      .then((result) => {
+      self.gerenciad = result.data.name
+      self.indicadord = result.data.indigen
+      self.b = result.data.color
+      })
       .catch((error) => {
       alert("Sin informacion para mostrar");
       });
@@ -85,6 +104,12 @@ export default {
       if(this.$route.name != "indicadoresc"){
       let username = localStorage.getItem("current_indicadoresc")
       this.$router.push({name: "indicadoresc", params:{username:username}})
+      }
+    },
+    gotod: function(){
+      if(this.$route.name != "indicadoresd"){
+      let username = localStorage.getItem("current_indicadoresd")
+      this.$router.push({name: "indicadoresd", params:{username:username}})
       }
     },
 },
