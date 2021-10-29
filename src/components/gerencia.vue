@@ -1,13 +1,13 @@
 <template>
 <div id="mainger">
   <h3>Gerencias</h3>
-  <nav3>
-     <h2>{{indicadord}}</h2>
+  <nav4>
+     <h2>""</h2>
      <label for="fgerencia"> {{gerenciad}} </label>
      <form v-on:submit.prevent="ShowDetail">
      <button v-on:click="gotod"><font face="Century Gothic">--</font></button>
      </form>
-  </nav3>
+  </nav4>
   <nav3>
      <h2>{{indicadorb}}</h2>
      <label for="fgerencia"> {{gerenciab}} </label>
@@ -165,5 +165,40 @@ export default {
   padding: 6px 10px;
   color: white;
   align-items: center;
+}
+
+#mainger nav4{
+  margin: 0px;
+  width: 100%;
+  height: 10vh;
+  min-height: 20px; 
+  text-align: center;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+#mainger nav4 h2 {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: white;
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#mainger nav4 label{
+  background: white;
+  width:170px;
+  height:50px;
+  display:flex;
+  align-items:center;
+  text-align: left;
+  border-radius: 10%;
+  padding-left:10px;
+  padding-right:20px;
 }
 </style>
