@@ -1,13 +1,6 @@
 <template>
 <div id="mainger">
   <h3>Gerencias</h3>
-  <nav4>
-     <h2></h2>
-     <label for="fgerencia"> {{gerenciad}} </label>
-     <form v-on:submit.prevent="ShowDetail">
-     <button v-on:click="gotod"><font face="Century Gothic">--</font></button>
-     </form>
-  </nav4>
   <nav3>
      <h2>{{indicadorb}}</h2>
      <label for="fgerencia"> {{gerenciab}} </label>
@@ -22,6 +15,13 @@
      <button v-on:click="gotoa"><font face="Century Gothic">--</font></button>
      </form>
   </nav3>
+  <nav4>
+     <h2></h2>
+     <label for="fgerencia"> {{gerenciad}} </label>
+     <form v-on:submit.prevent="ShowDetail">
+     <button v-on:click="gotod"><font face="Century Gothic">--</font></button>
+     </form>
+  </nav4>
 </div>
 </template>
 
